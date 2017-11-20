@@ -1,0 +1,56 @@
+
+  
+  <!-- <ion-nav id="nav"  [root]="rootPage"></ion-nav> -->
+  
+
+  <ion-content style="position: relative;">
+      
+        <div class="bloc_containerlogin" style="position: relative;">
+     
+          <ion-row>
+            <ion-col col-12 no-padding>
+              <p style="margin:0px;">
+               <img style="width:100%;height:auto;" class="samashoplogbanner" src="../assets/samashopmailbanner.png" alt="" >
+              </p>
+              <div style="position: absolute;top:10px;left:
+                 10px;">
+                  <img class="back_icon" (click)="backtomain()" src="../assets/back_icon.png" alt="">
+                </div>
+            </ion-col>
+          </ion-row>
+     
+          <!-- <div style="position: relative;"> -->
+          <ion-row style="margin-top:30px;">
+             <ion-col col-12 >
+                  <input [(ngModel)]="mail" class="samafield front" placeholder="Email de recuperation" type="email" name="" style="text-indent: 5px;" id="">
+             </ion-col>
+     
+             <ion-col col-12 text-center>
+                 <p style="margin:0px;">
+                  <img (click)="confirmCode()" class="samabtns" src="../assets/send_btn.png" alt="" >
+                 </p>
+             </ion-col>
+                 
+             
+
+
+             <ion-col col-12 text-center>
+               
+             </ion-col>
+     
+         </ion-row>
+        
+       <!-- </div> -->
+     
+      
+     
+        </div>
+         
+        <!-- <div class="samabottomrefs">
+           <span>conditions</span>
+           <span>-</span>
+           <span>à propos</span>
+         </div> -->
+     
+     </ion-content>
+     

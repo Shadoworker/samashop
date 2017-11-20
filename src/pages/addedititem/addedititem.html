@@ -1,0 +1,100 @@
+ <ion-header>
+    <samaheader></samaheader>
+ </ion-header>
+  
+<ion-content >
+     
+  
+        <ion-row>
+          <ion-col col-12 no-padding>
+            
+              <div class="templatescontainer">
+                  
+                  <ion-slides (ionSlideDidChange)="templateSlideChanged()"  style="background-color: #f7f7f7; border-bottom:solid 1px #cccccc;">
+          
+                  <ion-slide text-center>
+                     <p style="margin:0px;">
+                        <img class="template" src="../assets/template1.png"  alt="">
+                     </p>
+                  </ion-slide>
+
+                  <ion-slide text-center>
+                      <p style="margin:0px;">
+                         <img class="template" src="../assets/template2.png"  alt="">
+                      </p>
+                   </ion-slide>
+
+                   <ion-slide text-center>
+                      <p style="margin:0px;">
+                         <img class="template" src="../assets/template3.png"  alt="">
+                      </p>
+                   </ion-slide>
+
+
+          
+                  </ion-slides>
+                  
+                </div>
+
+            <img class="templateviewer" src="../assets/templateviewer_icon.png" alt="">
+         
+            <img class="okicon" src="../assets/ok_icon.png" alt="">
+          </ion-col>
+        </ion-row>
+   
+        <!-- <div style="position: relative;"> -->
+        <ion-row style="margin-top:30px;">
+           <ion-col col-12 >
+              <span class="front" style="margin-left: 8%;color: #b3b3b3;">CHOISIR UNE CATEGORIE</span>
+              <select name="" id="" class="samaselect">
+                <option value="0">VETEMENTS</option>
+                <option value="1">USTENCILS</option>
+                <option value="2">BEAUTE</option>
+                <option value="3">FRUITS & LEGUMES</option>
+                <option value="4">ARTS</option>
+                <option value="5">MUSIQUE</option>
+                <option value="6">LINGERIE</option>
+                <option value="7">VITRAILLE</option>
+                <option value="8">MOBILIER</option>
+                <option value="9">DECORATION</option>
+              </select>
+           </ion-col>
+   
+           <ion-col col-12 >
+               <input class="samafield front" type="text" name="" placeholder="Nom du shop" style="text-indent: 1px;" id="">
+          </ion-col>
+   
+          <ion-col col-12 >
+            <textarea class="samatextarea">
+
+            </textarea>
+          </ion-col>
+
+          <ion-col col-12 >
+              <input class="samafield front" type="text" name="" placeholder="Ville" style="text-indent: 1px;" id="">
+         </ion-col>
+
+         <ion-col col-12 >
+            <textarea class="samatextarea" aria-placeholder="quelquechose" placeholder="Tag(s) : chemises, robes, ...">
+
+            </textarea>
+          </ion-col>
+         
+         <ion-col col-12 text-center>
+            <p style="margin:0px;">
+             <img (click) = "terminer()" class="samabtns" src="../assets/terminer_btn.png" alt="" >
+            </p>
+        </ion-col>
+        
+        <ion-col col-12 text-center>
+          
+        </ion-col>
+   
+       </ion-row>
+      
+     <!-- </div> -->
+   
+    
+    
+   </ion-content>
+   

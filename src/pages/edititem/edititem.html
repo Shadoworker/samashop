@@ -1,0 +1,78 @@
+ <ion-header>
+    <samaheader></samaheader>
+ </ion-header>
+  
+<ion-content >
+     
+  
+        <ion-row>
+           
+          <ion-col col-12 no-padding>
+              
+              <input type="file" class="itemuploader" id="itemuploader"  (change)="loadImage($event)" style="display: none;">
+              <label for="itemuploader">
+                <div class="itemcontainer" style="background-size:cover">
+                    
+                        <p style="margin:0px;">
+                            <img class="itemimg" src="{{uploaded}}"  alt="">
+                        </p>
+                
+                
+                    </div>                  
+              </label>
+              <img (click)="goprev()" style="position: absolute;top:10px;left:10px;width:42px;height: auto;" src="../assets/back_icon.png">
+              
+
+ 
+          </ion-col>
+        </ion-row>
+   
+        <!-- <div style="position: relative;"> -->
+        <ion-row style="margin-top:10px;">
+           
+
+           
+              <ion-col col-12 *ngIf="hasgenre" >
+                <span class="front" style="margin-left: 8%;color: #b3b3b3;">CHOISIR UNE CATEGORIE</span>
+                <select  (change)="selectchange($event)" name="" id="" class="samaselect">
+                    <option *ngFor="let opt of genres" value="{{opt.id}}"   >{{opt.nom}}</option>
+                </select>
+                
+                <input class="samafield front" type="text" name="" [(ngModel)]="genrename" style="text-indent: 1px;" id="">
+                
+                </ion-col>
+
+                <ion-col col-12 >
+                    <input class="samafield front" type="text" name="" [(ngModel)]="title" style="text-indent: 1px;" id="">
+                </ion-col>
+
+                <ion-col col-11 >
+                    <span class="front" style="float: right; font-size: 10px;color:gray;">FCFA</span>
+                </ion-col>
+                <ion-col col-12 >
+                        <input class="samafield front" type="number" name=""  [(ngModel)]="price" style="text-indent: 1px;" id="">
+                </ion-col>
+             
+                <ion-col col-12 >
+                    <textarea [(ngModel)]="desc" class="samatextarea" style="white-space: normal;">
+                        
+                    </textarea>
+                </ion-col>
+
+
+
+                <ion-col col-12 text-center>
+                    <p style="margin:0px;">
+                    <img (click) = "terminer()" class="samabtns" src="../assets/terminer_btn.png" alt="" >
+                    </p>
+                </ion-col>
+        
+   
+       </ion-row>
+      
+     <!-- </div> -->
+   
+    
+    
+   </ion-content>
+   

@@ -1,0 +1,67 @@
+ <ion-header>
+    <samaheader></samaheader>
+ </ion-header>
+  
+<ion-content >
+     
+  
+        <ion-row>
+          <ion-col col-12 no-padding> 
+             <div style="width: 100%; height: 200px; overflow: hidden;">
+                <img style="width:100%;height:auto;" class="samashopcoverbanner" src="{{shopcover}}" alt="" >
+             </div>
+            
+            
+            <input type="file" id="coveruploader" (blur)="blurred($event)" (change)="loadCover($event)" style="display: none;">
+              <label for="coveruploader"> 
+                  <img style="" class="coverswitcher" src="../assets/changecover_icon.png" alt="">
+                                      
+              </label>
+            
+          </ion-col>
+        </ion-row>
+   
+        <!-- <div style="position: relative;"> -->
+        <ion-row style="margin-top:30px;"> 
+           <ion-col col-12 >
+                <input class="samafield front" [(ngModel)]="loggedlogin" type="number" name="" style="text-indent: 32px;" id="">
+                <span class="front samaplaceholder"  >+221 7</span>
+           </ion-col>
+   
+           <ion-col col-12 >
+               <input class="samafield front" disabled type="password" name="" value="motdepasse" style="text-indent: 1px;" id="">
+          </ion-col>
+   
+          <ion-col col-12 >
+              <input class="samafield front" type="text" name="" [(ngModel)]="loggedname" style="text-indent: 1px;" id="">
+         </ion-col>
+
+         <ion-col col-12 text-center>
+            <p style="margin:0px;">
+             <img (click) = "saveAccountChanges()" class="samabtns" src="../assets/savechanges_btn.png" alt="" >
+            </p>
+        </ion-col>
+         
+
+          
+           <ion-col col-12 text-center>
+              <p style="margin:0px;">
+               <img  *ngIf=showEditbtn (click)="shopcreateupdate()" class="samabtns" src="../assets/editershop_btn.png" alt="" >
+               <img  *ngIf=showCreatebtn (click)="shopcreateupdate()" class="samabtns" src="../assets/creershop_btn.png" alt="" >
+              </p>
+          </ion-col>
+          
+
+
+           <ion-col col-12 text-center>
+             
+           </ion-col>
+   
+       </ion-row>
+      
+     <!-- </div> -->
+   
+    
+    
+   </ion-content>
+   

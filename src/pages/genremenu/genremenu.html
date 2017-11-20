@@ -1,0 +1,8 @@
+ <ion-list *ngIf="notEmpty">
+
+   <button *ngFor="let genre of shopgenres" (click)="getGenreItems(genre.id)"  ion-item>{{genre.nom}}</button>
+
+ </ion-list>
+
+  <button *ngIf="empty" ion-item>Aucune catégorie</button>
+

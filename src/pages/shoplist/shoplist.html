@@ -1,0 +1,89 @@
+ <ion-header>
+    <samaheader></samaheader>
+ </ion-header>
+  
+<ion-content>
+
+      <ion-grid>
+       <!-- List header  -->
+        <ion-row> 
+            <ion-col col-2>
+              <img (click)='goprev()' class="back_icon" src="../assets/back_icon.png">
+            </ion-col>
+            <ion-col col-8 text-center>
+               <p class="text_header">{{activeCategName}}</p>
+            </ion-col>
+            <ion-col col-2>
+              <img class="back_icon" src="../assets/switch_view_icon.png">
+            </ion-col>
+        </ion-row>
+       
+            <!-- In order to not be obliged to go back to select new categ -->
+        <ion-row>
+            
+            <ion-col col-12>
+               <hr width="100%" align="center" style="color: #cccccc">
+            </ion-col>
+            <ion-slides (ionSlideDidChange)="categSlideChanged()">
+
+<!--  <div class="samascroll" style="width: 100%; height:50px; overflow-y: scroll; "> -->
+
+                <ion-slide *ngFor="let category of views; let i = index ">
+                  <div class="samascroll samascroll_{{i}}" style="width: 100%; height:370px; overflow-y: scroll;">
+                    
+                  <ion-row>
+                       
+                       <!--  <div class="samascroll" style="width: 100%; height:50px; overflow-y: scroll; "> -->
+                         
+                        <ion-row style="width: 100%;">
+                          <!-- [navPush]="shophomerout" -->
+                          <ion-col *ngFor="let shop of category.shops" col-6 no-padding (click)="gotoshop(shop)" >
+                              
+                                <div style="width: 95%; margin:2.5%;border-radius: 3px; border:solid 1px transparent;">
+                                 
+                                  <ion-card no-padding >
+                                    <ion-row no-padding>
+                                      <ion-col col-12 no-padding>
+                                       <div style="width: 100%; height: 100px;">
+                                         <img style="height: 100%; width: auto;" src="../assets/shopwall1.jpg"/>
+                                       </div>
+                                      </ion-col>
+                                    </ion-row>
+                                    <ion-card-content>
+                                      <ion-row>
+                                       <ion-col col-12>
+                                         <span>{{shop.name}}</span>
+                                       </ion-col>
+                                       <ion-col col-8>
+                                         <span>{{shop.city}}</span>
+                                       </ion-col> 
+                                       <ion-col col-4>
+                                         <img (click)="newfav(shop,$event)" id="samaminicon" src="../assets/samafav2_icon.png"/>
+                                       </ion-col>
+
+                                      </ion-row>
+                                    </ion-card-content>
+                                  </ion-card>
+
+                                </div>
+
+                          </ion-col>
+ 
+                       </ion-row>
+                         
+                      <!-- </div> -->
+
+                  </ion-row>
+
+                  </div>
+
+                </ion-slide>
+     
+           </ion-slides> 
+
+        </ion-row>
+ 
+   
+     </ion-grid>
+    
+</ion-content>

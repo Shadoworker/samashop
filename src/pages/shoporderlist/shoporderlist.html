@@ -1,0 +1,134 @@
+<ion-header>
+    <samaheader></samaheader>
+  </ion-header>
+  
+  <ion-content>
+  
+      <ion-grid>
+       <!-- List header  -->
+        <ion-row> 
+            <ion-col col-2>
+              <img (click)="goprev()" class="back_icon" src="../assets/back_icon.png">
+            </ion-col>
+            <ion-col col-8 text-center>
+               <span class="caps" style="margin-top:5px;color:gray;">COMMANDES</span>
+               <p class="text_header upper" style="margin-top: 0px;">{{commandtype}}</p>
+            </ion-col>
+            <ion-col col-2 class="archbtn" [style.display]="showarchivebtn ? 'block' : 'none' ">
+              <img (click)="togglearchvs()" class="back_icon" src="../assets/arch_btn.png">
+            </ion-col>
+        </ion-row>
+       
+            <!-- In order to not be obliged to go back to select new categ -->
+        <ion-row>
+            
+            <ion-col col-12>
+               <hr width="100%" align="center" style="color: #cccccc">
+            </ion-col>
+            <ion-slides (ionSlideDidChange)="categSlideChanged()">
+   
+                <ion-slide >
+                  <div class="samascroll " style="width: 100%; height:370px;">
+                    
+                  <ion-row>
+                       
+                      <ion-col col-12   >
+                        <ion-list>
+                            <ion-item (click)="see_command(eff)" class="itemcomm" *ngFor="let eff of effectuees, let i = index"  style="border: solid 1px gainsboro; margin-top: 5px;">
+                              
+                                <img (click)="remove_eff(eff, $event)" src="../assets/xicon.png" style="position: absolute;left: 8px;top:6px;width: 14px;height: 4px;" alt="">
+
+                                <h2  class="front upper" style="letter-spacing: 1px;">{{eff.commandref}}</h2>
+                                <p class="front" style="width: 100%">
+                                  <span style="float: left;">{{eff.count}} Article(s)</span>
+                                  <span class="caps" style="float: right;">{{eff.created_at}}</span>
+                                </p>
+                                <ion-icon name="logo-twitter" item-start></ion-icon>
+                                 <span class="caps">{{eff.shopname}}</span> 
+                                <ion-badge item-end style="background-color: transparent; margin:0px;">
+                                   <a (click)="call($event)" href="tel:{{eff.num}}">
+                                    <button ion-button class="normalbtn" style="width: 35px; height: 35px;">
+                                      <img  style="width:100%; height: auto;" src="../assets/call_icon.png" alt="">
+                                    </button>
+                                  </a>
+                                </ion-badge>
+                             </ion-item>
+                          </ion-list>
+                      </ion-col>
+  
+                  </ion-row>
+  
+                  </div>
+  
+                </ion-slide>
+
+
+                <ion-slide >
+                  <div class="samascroll " style="width: 100%; height:370px;">
+                    
+                  <ion-row>
+                       
+                      <ion-col col-12 >
+
+                         <ion-col *ngIf="hasntShop" col-12 no-padding>
+                              <span class="caps" style="display: block; font-size: 16px;text-align: center;margin-top: 70px;">
+                                VOUS N'AVEZ PAS ENCORE DE BOUTIQUE
+                              </span>
+                              <span style="display: block">
+                                 <img src="../assets/creershop_btn.png" alt="">
+                              </span>
+                         </ion-col>
+
+                         <ion-list *ngIf="hasShop" [style.display]="showrecents ? 'block' : 'none' ">
+                            <ion-item class="itemcomm" (click)="see_command(rec)" *ngFor="let rec of recues" style="border: solid 1px gainsboro; margin-top: 5px;" >
+                              
+                                <img (click)="remove_rec(rec, $event)" src="../assets/xicon.png" style="position: absolute;left: 8px;top:6px;width: 14px;height: 4px;" alt="">
+                              
+                                <h2  class="front upper" style="letter-spacing: 1px;">{{rec.commandref}}</h2>
+                                <p class="front" style="width: 100%">
+                                  <span style="float: left;">{{rec.count}} Article(s)</span>
+                                  <span class="caps" style="float: right;">{{rec.created_at}}</span>
+                                </p>
+                                <ion-icon name="logo-twitter" item-start></ion-icon>
+                                <span class="caps">par <strong>{{rec.maker}}</strong></span> 
+                                  <ion-badge item-end style="background-color: transparent; margin:0px;">
+                                   <button (click)="archivate(rec, $event)" ion-button class="normalbtn" style="width: 35px; height: 35px;">
+                                     <img  style="width:100%; height: auto;" src="../assets/arch_icon.png" alt="">
+                                   </button>
+                                  </ion-badge>
+                             </ion-item>
+                          </ion-list>
+
+                          <ion-list *ngIf="showarchvs">
+                            <ion-item (click)="see_command(archv)" class="itemcomm" *ngFor="let archv of archvs" style="border: solid 1px gainsboro; margin-top: 5px;" >
+                                <h2  class="front upper" style="letter-spacing: 1px;">{{archv.commandref}}</h2>
+                                <p class="front" style="width: 100%">
+                                  <span style="float: left;">{{archv.count}} Article(s)</span>
+                                  <span class="caps" style="float: right;">{{archv.created_at}}</span>
+                                </p>
+                                <ion-icon name="logo-twitter" item-start></ion-icon>
+                                <span class="caps">par <strong>{{archv.maker}}</strong></span> 
+                                 <!-- <ion-badge item-end style="background-color: transparent; margin:0px;">
+                                      <img style="width:46px; height: auto;" src="../assets/arch_icon.png" alt="">
+                                 </ion-badge> -->
+                             </ion-item>
+                          </ion-list>
+
+
+                      </ion-col>
+  
+                  </ion-row>
+  
+                  </div>
+  
+                </ion-slide>
+
+     
+           </ion-slides> 
+  
+        </ion-row>
+  
+     </ion-grid>
+    
+  </ion-content>
+  

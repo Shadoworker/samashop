@@ -1,0 +1,257 @@
+ 
+
+<ion-header>
+    <samaheader></samaheader>
+</ion-header>
+
+<ion-content>
+<!-- <button (click)="seeoredit()" *ngIf=isEditMode ion-button color="primary" outline>Mode Edition</button> -->
+<ion-row >
+    <ion-col col-12 style="height: 45px; background-color: #43565b; " color="template_one">
+            <span style="float: left">
+                <span>
+                  <img src="{{shoplogo}}" style=" width: 32px; height:32px;border-radius: 50%;" alt="">
+                </span>
+                <span class="front shopname" style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 12ch;" >{{shopname}}</span>
+            </span>
+            <span style="float: right">
+                <img (click)="togglePopMenu2($event)" class="categdrop" src="../assets/categdrop_icon.png" style="
+                width: 22px;
+                height: auto;
+                margin-top: 10px;
+                margin-right: 10px;" alt="">
+            </span>
+
+    </ion-col>
+   
+</ion-row>
+  
+
+
+<ion-row>
+     
+        <ion-slides pager style="height:210px;">
+                
+            <ion-slide (click)="seeoredit(top)" *ngFor="let top of topslides"  >
+                <div style="width: 100%; height: 210px;">
+                    <img src="{{top.image}}" alt="" style="height: 100%; width: 100%;">
+                </div>
+                <h3 style="position: absolute;top: 2px; left: 15px;">{{top.title}}</h3>
+                <span class="front" style="color:white;position: absolute; right: 15px;bottom: 10px;text-shadow:1px 1px gray">{{top.price}}<sup> FCFA</sup></span>
+            </ion-slide>
+    
+        </ion-slides>
+     
+</ion-row>
+
+<ion-row>
+    <ion-col col-12  *ngFor="let ad of adv" >
+      <div  style="width: 98.5%; margin:0.5%; height:auto;overflow: hidden; border-radius: 3px; border:solid 1px transparent;">
+        <img id="{{ad.id}}_{{ad.shopid}}" src="{{ad.image}}" style="width:100%; height:auto;" alt="">
+      </div>           
+    </ion-col>
+</ion-row>
+
+<ion-row style="height:auto;" class="suggestcont">
+    <ion-col col-5 style="min-height: 100%;">
+       
+            <div (click)="seeoredit_long(suggest)" *ngFor="let suggest of suggest1" style="width: 95%; height: 98%; margin:2.5%;border-radius: 3px; border:solid 1px transparent;">
+                    
+                     <ion-card no-padding style="height: 100%;" >
+                       <ion-row no-padding>
+                         <ion-col col-12 no-padding>
+                          <div style="width: 100%; height: auto">
+                            <img style="height: auto; width: 100%;" src="{{suggest.image}}"/>
+                          </div>
+                         </ion-col>
+                       </ion-row>
+                       <ion-card-content>
+                         <ion-row>
+                          <ion-col col-12>
+                            <span class="front">{{suggest.title}}</span>
+                          </ion-col>
+                          <ion-col col-8>
+                            <span class="front" >{{suggest.price}}<sup> FCFA</sup></span>
+                          </ion-col> 
+                          <ion-col col-4>
+                            <!-- <img style="float: left; margin-left: 0px;"  id="samaminicon" src="../assets/samafav2_icon.png"/> -->
+                          <!-- </ion-col>
+                          <ion-col col-6> -->
+                            <img (click)="addtocard($event,suggest)"  style="float: right;margin-right: 10px;"  style="margin-right: 5px;" id="samaminicon" src="../assets/samapanier2_icon.png"/>
+                          </ion-col>
+
+                         </ion-row>
+                       </ion-card-content>
+                     </ion-card>
+
+                  </div>
+       
+    </ion-col>
+    <ion-col col-7>
+
+        <ion-row>
+            <div class="loadref" (click)="seeoredit(suggest)" *ngFor="let suggest of suggest2" style="width: 95%; margin:2.5%;border-radius: 3px; border:solid 1px transparent;">
+                    
+                <ion-card no-padding >
+                <ion-row no-padding>
+                    <ion-col col-12 no-padding>
+                    <div style="width: 100%; height: auto;">
+                    <img style="height: auto; width: 100%;" src="{{suggest.image}}"/>
+                    </div>
+                    </ion-col>
+                </ion-row>
+                <ion-card-content>
+                    <ion-row>
+                    <ion-col col-12>
+                    <span class="front">{{suggest.title}}</span>
+                    </ion-col>
+                    <ion-col col-6>
+                    <span class="front">{{suggest.price}}<sup> FCFA</sup></span>
+                    </ion-col> 
+                    <ion-col col-6>
+                    <!-- <img style="float: left; margin-left: 0px; margin-right: 15px;"  id="samaminicon" src="../assets/samafav2_icon.png"/> -->
+                    <img  (click)="addtocard($event,suggest)" style="float:right;margin-right: 5px;" id="samaminicon" src="../assets/samapanier2_icon.png"/>
+                    </ion-col>
+
+                    </ion-row>
+                </ion-card-content>
+                </ion-card>
+
+             </div>
+        </ion-row>
+
+
+        <ion-row>
+            <div  (click)="seeoredit(suggest)" *ngFor="let suggest of suggest3" style="width: 95%; margin:2.5%;border-radius: 3px; border:solid 1px transparent;">
+                        
+                    <ion-card no-padding >
+                    <ion-row no-padding>
+                        <ion-col col-12 no-padding>
+                        <div style="width: 100%; height: auto;">
+                        <img style="height: auto; width: 100%;" src="{{suggest.image}}"/>
+                        </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-card-content>
+                        <ion-row>
+                        <ion-col col-12>
+                        <span class="front">{{suggest.title}}</span>
+                        </ion-col>
+                        <ion-col col-6>
+                        <span class="front">{{suggest.price}}<sup> FCFA</sup></span>
+                        </ion-col> 
+                        <ion-col col-6>
+                        <!-- <img style="float: left; margin-left: 0px; margin-right: 15px;" id="samaminicon" src="../assets/samafav2_icon.png"/> -->
+                        <img (click)="addtocard($event,suggest)" style="float:right; margin-right: 5px;" id="samaminicon" src="../assets/samapanier2_icon.png"/>
+                       </ion-col>
+    
+                        </ion-row>
+                    </ion-card-content>
+                    </ion-card>
+    
+                 </div>
+            </ion-row>
+    
+    
+
+        
+    </ion-col>
+</ion-row>
+
+
+
+<ion-row style="margin-top: 75px;" text-center>
+    <span class="front" style="width:100%;color:gainsboro;text-align: center">COLLECTION</span>
+    <ion-col col-12 style="height: 210px;">
+        
+        <ion-slides style="width: 95%; margin:2.5%;">
+                
+            <ion-slide (click)="seeoredit(col)" *ngFor="let col of collection">
+                <img src="{{col.image}}" alt="" style="height: 100%; width: auto;">
+                <h2 style="    
+                position: absolute;
+                top: 0px;
+                left: 5px;
+                font-family: 'front';
+                color: #1a1a1a;">{{col.title}}</h2>
+                <span class="front" style="color:white;position: absolute; right: 15px;bottom: 10px;">{{col.price}}<sup> FCFA</sup></span>
+            </ion-slide>
+             
+        </ion-slides>
+         
+        
+    </ion-col>
+   
+</ion-row>
+
+<ion-row *ngIf=isEditMode >
+    <ion-col col-12>
+        <img (click)="newcollect()" src="../assets/add_btn.png" style="width:42px;height:42px ;float:right; margin-right: 6px;margin-top: 6px;" alt="">
+    </ion-col>
+</ion-row>
+
+<ion-row *ngIf=isEditMode>
+    <ion-col col-12>
+        <img (click)="newart()" src="../assets/addart_btn.png" style="width:100px;height:auto;float:left; margin-left: 6px;margin-top: 6px;" alt="">
+    </ion-col>
+</ion-row>
+
+<ion-row style="margin-top: 20px;" text-center>
+        <span class="front" style="width:100%;color:gainsboro;text-align: center">CATALOGUE</span>
+        <ion-col col-12>
+            <hr width="95%" align="center" style="color:gainsboro;">
+            <ion-slides style="width: 95%; margin:2.5%;">
+                    
+                <ion-slide  >
+                     
+                   <ion-row>
+
+                        <ion-col (click)="seeoredit(art)" *ngFor="let art of articles"  col-6 no-padding  >
+                                    
+                                <div style="width: 95%; margin:2.5%;border-radius: 3px; border:solid 1px transparent;">
+                                    
+                                    <ion-card no-padding >
+                                        <ion-row no-padding>
+                                        <ion-col col-12 no-padding>
+                                            <div style="width: 100%; height: 100px;">
+                                            <img style="height: 100%; width: auto;" src="{{art.image}}"/>
+                                            </div>
+                                        </ion-col>
+                                        </ion-row>
+                                        <ion-card-content>
+                                        <ion-row>
+                                            <ion-col col-12>
+                                            <span class="caps">{{art.title}}</span>
+                                            </ion-col>
+                                            <ion-col col-6>
+                                            <span class="front">{{art.price}}<sup>FCFA</sup></span>
+                                            </ion-col> 
+                                            <ion-col col-6>
+                                                <img style="float: right;margin-right: 6px;" id="samaminicon_art" (click)="addtocard($event,art)" src="../assets/samapanier2_icon.png"/>
+                                            </ion-col>
+                                            <!-- <ion-col col-3>
+                                            <img (click)="setorder(art, $event)" id="samaminicon_art" src="../assets/samafav2_icon.png"/>
+                                            </ion-col> -->
+                                        </ion-row>
+                                        </ion-card-content>
+                                    </ion-card>
+
+                                    </div>
+
+                        </ion-col>
+                        
+
+                   </ion-row>
+
+               </ion-slide>
+          
+            </ion-slides>
+             
+            
+        </ion-col>
+       
+    </ion-row>
+
+</ion-content>
+
+

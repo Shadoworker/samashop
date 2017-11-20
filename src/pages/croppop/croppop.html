@@ -1,0 +1,45 @@
+
+  
+  <!-- <ion-nav id="nav"  [root]="rootPage"></ion-nav> -->
+  
+
+  <ion-content style="position: relative;">
+      
+        <div class="bloc_containerlogin" style="position: relative;">
+         
+         <ion-row>
+          <ion-col col-12 no-padding id="croph">
+            <img class="cropheader" style="position: fixed;z-index: 999999; width:100%;height:auto;" src="../assets/cropheader.png" alt="" >
+          </ion-col>
+         </ion-row>
+
+          <ion-row>
+            <ion-col no-padding col-12 style="border-radius: 3px; border:dashed 1px gray;">
+             
+              <!-- <canvas id="c"  ></canvas> -->
+              
+            </ion-col>
+
+             <ion-col col-12 no-padding>
+              
+
+
+            
+            </ion-col>
+
+          </ion-row>
+     
+           
+        </div>
+          
+           <img src="../assets/zoomout.png" (click)="zoomOut()" style="position: fixed;bottom: 75px; left: 20px; width: 40px" >
+           
+           <img src="../assets/zoomin.png" (click)="zoomIn()" style="position: fixed;bottom: 20px; left: 20px; width: 40px" >
+           
+            <img src="../assets/reset.png" (click)="reset()" style="position: fixed;bottom: 20px; left: 75px; width: 40px" >
+           
+           <img src="../assets/crop_btn.png" (click)="crop()" style="position: fixed;bottom: 20px; right: 20px; width: 50px;" >
+             
+                  
+     </ion-content>
+     

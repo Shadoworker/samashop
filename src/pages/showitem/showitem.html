@@ -1,0 +1,58 @@
+ <ion-header>
+    <samaheader></samaheader>
+ </ion-header>
+  
+<ion-content >
+     
+  
+        <ion-row>
+           
+          <ion-col col-12 no-padding>
+            
+              <div class="itemcontainer" style=" background-size:cover">
+                   
+                     <p style="margin:0px;">
+                        <img class="itemimg" src="{{item.image}}"  alt="">
+                     </p>
+            
+                     <img (click)="goback()" style="position: absolute;top:10px;left:10px;width:42px;height: auto;" src="../assets/back_icon.png">
+            
+                </div>
+ 
+          </ion-col>
+        </ion-row>
+   
+        <!-- <div style="position: relative;"> -->
+        <ion-row style="margin-top:10px;">
+          <ion-col col-8 >
+            <span class="front" style="font-size:22px;margin-left: 5px;">{{item.title}}</span>
+          </ion-col>
+          <ion-col col-4 text-right >
+              <span class="front" style="font-size:22px;text-align: right; margin-left: 5px;">{{item.price}}<sup>FCFA</sup></span>
+          </ion-col>
+
+          <ion-col col-12 >
+              <span class="caps" style="font-size:18px;margin-left: 5px;">{{item.desc}}</span>
+          </ion-col>
+
+         <ion-col col-12 text-center>
+            <p style="margin:0px;">
+             <img (click) = "addtocard(item)" class="samabtns" src="../assets/samapanier3_icon.png" alt="" >
+            </p>
+        </ion-col>
+
+        <!-- <ion-col col-12 text-center>
+            <p style="margin:0px;">
+             <img (click) = "addtofav(item)" class="samabtns" src="../assets/samafav3_icon.png" alt="" >
+            </p>
+        </ion-col> -->
+        
+   
+       </ion-row>
+      
+     <!-- </div> -->
+   
+    
+    
+   </ion-content>
+   

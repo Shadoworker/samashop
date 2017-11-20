@@ -1,0 +1,74 @@
+page-home {
+
+}
+
+ .samalogo
+ {
+
+    width: 40px; height : auto;
+    margin-left: 10px;
+    margin-top: 5px;
+
+ }
+.searchbar-md .searchbar-clear-icon
+{
+  left:13px;
+}
+
+.searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel
+{
+  display:none;
+}
+  .samaheadericon
+ {
+
+    width: 42px;
+    height: auto;
+    margin-bottom: 5px;
+ }
+ .slidescontainer
+ {
+ 	height:240px;
+ }
+ .searchcontainer
+ {
+ 	display:block;
+ 	margin-top:5px;
+ 	width:95%;
+ 	margin-left:2.5%;
+ }
+ input.samainput
+ {
+ 	display: block;
+    width: 100%;
+    outline: none;
+    padding: 14px 10px;
+    border-radius: 5px 5px;
+    border-color: #cccccc;
+ }
+
+ .listcontainer
+ {
+ 	display:block;
+ 	margin-top:5px;
+ 	width:95%;
+ 	margin-left:2.5%;
+ }
+
+.toolbar-background {
+}
+
+
+
+@font-face {
+  font-family: "caps";
+  src: url("../assets/fonts/Capsuula.ttf");
+  /*font-weight: 100;*/
+}
+
+@font-face {
+  font-family: "front";
+  src: url("../assets/fonts/front.otf");
+  /*font-weight: 100;*/
+}
+

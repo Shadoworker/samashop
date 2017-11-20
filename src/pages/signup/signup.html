@@ -1,0 +1,66 @@
+
+  
+  <!-- <ion-nav id="nav"  [root]="rootPage"></ion-nav> -->
+  
+
+<ion-content style="position: relative;">
+ 
+   <div class="bloc_containerlogin" style="position: relative;">
+
+     <ion-row>
+       <ion-col col-12 no-padding>
+         <p style="margin:0px;">
+          <img style="width:100%;height:auto;" class="samashoplogbanner" src="../assets/samashopsignbanner.png" alt="" >
+         </p>
+         <div style="position: absolute;top:10px;left:
+         10px;">
+          <img class="back_icon" (click)="backtomain()" src="../assets/back_icon.png" alt="">
+        </div>
+       </ion-col>
+     </ion-row>
+
+     <!-- <div style="position: relative;"> -->
+     <ion-row style="margin-top:30px;">
+        <ion-col col-12 >
+             <input [(ngModel)]="login" class="samafield front _login" placeholder="* *** ** **" type="number" name="" style="text-indent: 32px;" id="">
+             <span  class="front samaplaceholder"  >+221 7</span>
+        </ion-col>
+
+        <ion-col col-12 >
+            <input [(ngModel)]="pword" class="samafield front _pword" type="password" name="" placeholder="mot de passe" style="text-indent: 1px;" id="">
+       </ion-col>
+
+       <ion-col col-12 >
+          <input [(ngModel)]="name"  class="samafield front _name" type="text" name="" placeholder="Nom complet (optionel)" style="text-indent: 1px;" id="">
+      </ion-col>
+
+      
+       <ion-col col-12 >
+          <input [(ngModel)]="mail"  class="samafield front _name" type="email" name="" placeholder="Email de recupération" style="text-indent: 1px;" id="">
+      </ion-col>
+
+        <ion-col col-12 text-center>
+            <p style="margin:0px;">
+             <img (click)="createSamashopper()" class="samabtns" src="../assets/terminer_btn.png" alt="" >
+            </p>
+        </ion-col>
+       
+        <ion-col col-12 text-center>
+          
+        </ion-col>
+
+    </ion-row>
+   
+  <!-- </div> -->
+
+ 
+
+   </div>
+    
+   <!-- <div class="samabottomrefs">
+      <span>conditions</span>
+      <span>-</span>
+      <span>à propos</span>
+    </div> -->
+
+</ion-content>

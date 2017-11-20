@@ -1,0 +1,86 @@
+page-home {
+
+}
+
+ .samalogo
+ {
+
+    width: 40px; height : auto;
+    margin-left: 10px;
+    margin-top: 5px;
+
+ }
+ .popover-content
+ {
+    top:150px;
+    right:0px;
+ }
+
+ .shopname
+ {
+  margin-top: 10px;
+  margin-left: 10px;
+  float: right;
+  color: #f2f2f2;
+ }
+ .categdrop
+ {
+  width: 22px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+ }
+
+  .samaheadericon
+ {
+
+    width: 42px;
+    height: auto;
+    margin-bottom: 5px;
+ }
+ .slidescontainer
+ {
+ 	height:240px;
+ }
+ .searchcontainer
+ {
+ 	display:block;
+ 	margin-top:5px;
+ 	width:95%;
+ 	margin-left:2.5%;
+ }
+ input.samainput
+ {
+ 	display: block;
+    width: 100%;
+    outline: none;
+    padding: 14px 10px;
+    border-radius: 5px 5px;
+    border-color: #cccccc;
+ }
+
+ .listcontainer
+ {
+ 	display:block;
+ 	margin-top:5px;
+ 	width:95%;
+ 	margin-left:2.5%;
+ }
+
+.toolbar-background {
+}
+
+
+
+@font-face {
+  font-family: "caps";
+  src: url("../assets/fonts/Capsuula.ttf");
+  /*font-weight: 100;*/
+}
+
+@font-face {
+  font-family: "front";
+  src: url("../assets/fonts/front.otf");
+  /*font-weight: 100;*/
+}
+

@@ -1,0 +1,76 @@
+<ion-header>
+  <samaheader></samaheader>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid>
+     <!-- List header  -->
+      <ion-row> 
+          <ion-col col-2>
+            <img (click)="goprev()" class="back_icon" src="../assets/back_icon.png">
+          </ion-col>
+          <ion-col col-8 text-center>
+             <p class="text_header">MES PANIERS</p>
+          </ion-col>
+          <!-- <ion-col col-2>
+            <img class="back_icon" src="../assets/switch_view_icon.png">
+          </ion-col> -->
+      </ion-row>
+     
+          <!-- In order to not be obliged to go back to select new categ -->
+      <ion-row>
+          
+          <ion-col col-12>
+             <hr width="100%" align="center" style="color: #cccccc">
+          </ion-col>
+          <ion-slides (ionSlideDidChange)="categSlideChanged()">
+
+<!--  <div class="samascroll" style="width: 100%; height:50px; overflow-y: scroll; "> -->
+
+              <ion-slide *ngFor="let orderbloc of orders, let i = index" >
+                <div class="samascroll " style="width: 100%; height:370px; overflow-y: scroll;">
+                  <h3 class="front">{{orderbloc.shopname}}</h3>
+                  <img src="../assets/command_btn.png" style="width: 135px; height: auto;" (click)="commander(i)" >
+                    
+                <ion-row>
+                     
+                     
+                      <ion-row style="width: 100%;"> 
+                        <ion-col col-12 no-padding text-center>
+                            <span class="caps" style="color:gray;margin-top:25%;">{{displayedtext}}</span>
+                        </ion-col>
+
+                       <!-- <div *ngIf="notempty" style="width:100%;" > -->
+ 
+                           <ion-col col-12 no-padding >
+                              <ion-list>
+                                  <ion-item  *ngFor="let order of orderbloc.items, let j = index">
+                                    <ion-thumbnail item-start>
+                                      <img src="{{order.image}}">
+                                    </ion-thumbnail>
+                                    <h2>{{order.name}}</h2>
+                                    <p class="front">{{order.price}}</p>
+
+                                      <input id="checker" name="order_{{i}}" value="{{j}}" type="checkbox" size="46" style="padding: 10px 8px;" >
+                      
+                                  </ion-item>
+                                </ion-list>
+                           </ion-col>
+                       <!-- </div> -->
+                     </ion-row>
+                        
+
+                </ion-row>
+
+                </div>
+
+              </ion-slide>
+   
+         </ion-slides> 
+
+      </ion-row>
+
+   </ion-grid>
+  
+</ion-content>

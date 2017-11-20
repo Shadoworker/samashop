@@ -1,0 +1,89 @@
+
+<!-- <ion-header > -->
+  <ion-toolbar color="primary">
+   
+
+    <img (click)="gotomain()" class="samalogo" src="../assets/samashop_logo.png">
+
+    <ion-buttons end *ngIf=mode>
+        <button ion-button icon-only>
+           <img class="samaheadericon" src="../assets/samamode_icon.png">
+        </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotofavs()">
+         <img class="samaheadericon" src="../assets/samafav_icon.png">
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotomyorders()" >
+         <img class="samaheadericon" src="../assets/samapanier_icon.png">
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="togglePopMenu()">
+         <ion-icon name="more"></ion-icon>
+      </button>
+    
+    </ion-buttons>
+ 
+
+  </ion-toolbar>
+<!-- </ion-header> -->
+<div class="popmenu" style="
+    position: absolute;
+    width: 171px;
+    min-height: 50px;
+    background-color: #F3F4F5;
+    z-index: 999;
+    border:solid 1px #cccccc;
+    right: 0px;
+    top: 57px;
+    display:none;
+    font-family: 'caps';">
+
+    <ion-list>
+            <ion-item [navPush]="accountrout">
+               <span style="float: left">
+                   <img class="popmenuicon" src="../assets/moncompte_icon.png" alt="">
+              </span>
+              
+              <span style="float: left">
+                   Mon compte
+              </span>  
+            </ion-item>
+            <ion-item  (click)="shoporders()">
+                <span style="float: left">
+                        <img class="popmenuicon" src="../assets/commandes_icon.png" alt="">
+                    </span>
+                    
+                    <span style="float: left">
+                        Commandes
+                    </span>
+            </ion-item>
+            <ion-item>
+                <span style="float: left">
+                        <img class="popmenuicon" src="../assets/conds_icon.png" alt="">
+                    </span>
+                    
+                    <span style="float: left">
+                        Conditions
+                    </span>
+            </ion-item>
+            <ion-item (click)="logout()" >
+                <span style="float: left">
+                        <img class="popmenuicon" src="../assets/deconnex_icon.png" alt="">
+                    </span>
+                    
+                    <span style="float: left">
+                        Deconnexion
+                    </span>
+            </ion-item>
+
+   </ion-list>
+
+</div>
+ 

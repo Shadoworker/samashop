@@ -1,0 +1,81 @@
+<ion-header>
+    <samaheader></samaheader>
+  </ion-header>
+  
+  <ion-content>
+  
+      <ion-grid>
+       <!-- List header  -->
+        <ion-row> 
+            <ion-col col-2>
+              <img (click)="goprev()" class="back_icon" src="../assets/back_icon.png">
+            </ion-col>
+            <ion-col col-8 text-center>
+               <span class="caps" style="margin-top:5px;color:gray;">COMMANDE</span>
+               <p class="text_header upper" style="margin-top: 0px;">{{commandref}}</p>
+            </ion-col>
+            <ion-col col-2>
+                <sup class="front" style="float: right;margin-top: 20px;font-size:8px">FCFA</sup>
+                <span class="front" style="float: right; font-size: 100%;"> {{totalprice}} </span>
+            </ion-col>
+              
+             
+        </ion-row>
+       
+            <!-- In order to not be obliged to go back to select new categ -->
+        <ion-row>
+            
+            <ion-col col-12>
+               <hr width="100%" align="center" style="color: #cccccc">
+            </ion-col>
+            <ion-slides>
+   
+                <ion-slide >
+                  <div class="samascroll" style="width: 100%;" [ngStyle]="{'height':rightH, 'overflow-y':'scroll'}">
+                    
+                  <ion-row >
+                       
+                      <ion-col col-12   >
+                        <ion-list>
+                            <ion-card style="padding-bottom: 15px;" class="itemcomm" *ngFor="let item of commanditems, let i = index"  style="border: solid 1px gainsboro; margin-top: 5px;">
+                              <div style="width:100%; border-bottom: solid 1px gainsboro;">
+                                    <ion-row>
+                                      <ion-col col-12>
+                                        <img src="{{item.command_item_img}}"/> 
+                                      </ion-col>
+                                    </ion-row>
+                              </div>
+                             
+                              <div class="card-title front " style="font-size:18px;">
+                                <ion-row>
+                                  <ion-col col-12>
+                                      {{item.command_item_name}}
+                                  </ion-col>
+                                </ion-row>
+                              </div>
+                              <div class="card-subtitle front">
+                                  <ion-row>
+                                      <ion-col col-12>
+                                        {{item.command_item_price}}<sup>FCFA</sup>
+                                      </ion-col>
+                                    </ion-row></div>
+                            </ion-card>
+
+                                 
+                          </ion-list>
+                      </ion-col>
+  
+                  </ion-row>
+  
+                  </div>
+  
+                </ion-slide>
+
+           </ion-slides> 
+  
+        </ion-row>
+  
+     </ion-grid>
+    
+  </ion-content>
+  

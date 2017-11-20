@@ -1,0 +1,129 @@
+page-home {
+
+}
+
+.templatescontainer
+{
+  height:220px;
+}
+
+ .samalogo
+ {
+
+    width: 40px; height : auto;
+    margin-left: 10px;
+    margin-top: 5px;
+
+ }
+.template
+{
+  width: 200px;
+  height: auto;
+}
+.itemcontainer
+{
+  width: 100%; height: 210px; overflow: hidden;
+}
+img.itemimg
+{
+  width: 100%;height: auto;
+}
+.okicon
+{
+  z-index: 99999;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  height: auto;
+}
+
+.templateviewer
+{
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  width: 30px; height: auto;
+}
+ .samashopcoverbanner
+ {
+   width: 100%;height: auto;
+ }
+  .samaheadericon
+ {
+
+    width: 42px;
+    height: auto;
+    margin-bottom: 5px;
+ }
+ .slidescontainer
+ {
+ 	height:240px;
+ }
+ .searchcontainer
+ {
+ 	display:block;
+ 	margin-top:5px;
+ 	width:95%;
+ 	margin-left:2.5%;
+ }
+ input.samainput
+ {
+ 	  display: block;
+    width: 100%;
+    outline: none;
+    padding: 14px 10px;
+    border-radius: 5px 5px;
+    border-color: #cccccc;
+ }
+
+ select.samaselect
+ {
+  display: block;
+  width: 84%;
+  padding: 18px 18px;
+  margin-left: 8%;
+  border: solid 1px #cccccc;
+  border-radius: 4px 4px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family: 'front';
+ }
+
+ textarea.samatextarea
+ {
+  display: block;
+  width: 84%;
+  white-space: normal;
+  padding: 18px 18px;
+  margin-left: 8%;
+  border: solid 1px #cccccc;
+  border-radius: 4px 4px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family: 'caps';
+ }
+
+
+
+ .listcontainer
+ {
+ 	display:block;
+ 	margin-top:5px;
+ 	width:95%;
+ 	margin-left:2.5%;
+ }
+
+
+@font-face {
+  font-family: "caps";
+  src: url("../assets/fonts/Capsuula.ttf");
+  /*font-weight: 100;*/
+}
+
+@font-face {
+  font-family: "front";
+  src: url("../assets/fonts/front.otf");
+  /*font-weight: 100;*/
+}
+

@@ -1,0 +1,129 @@
+ 
+.back_icon
+{
+  width:44px;height:auto;
+}
+
+.text_header
+{
+    text-align: center;
+    font-family: 'front';
+    color: #cecfd0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 12px;
+}
+ 
+.card-content-md
+{
+  padding:0px;
+}
+.card-md
+{
+  margin:0px;
+  width:100%;
+}
+ .samalogo
+ {
+
+    width: 40px; height : auto;
+    margin-left: 10px;
+    margin-top: 5px;
+
+ }
+
+  .samaheadericon
+ {
+
+    width: 42px;
+    height: auto;
+    margin-bottom: 5px;
+ }
+
+  ion-col.col
+  {
+    text-align:left;
+  }
+  .swiper-slide img
+  {
+
+ 
+  }
+
+  #samaminicon
+ {
+
+    width: 22px;
+    margin-left:15px;
+    height: auto;
+    margin-bottom: 5px;
+    filter:grayscale(100%);
+ }
+
+ 
+.samascroll::scrollbar
+{ 
+ background-color: transparent;
+ opacity: 0;
+}
+.samascroll::scrollbar:hover
+{
+opacity: 1;
+}
+.samascroll::scrollbar-track
+{
+ background-color: transparent;
+}
+
+.samascroll::scrollbar-thumb
+{
+ display:none;
+}
+
+.samascroll::scrollbar-button
+{
+ background-color: transparent;
+}
+
+ .slidescontainer
+ {
+ 	height:240px;
+ }
+ .searchcontainer
+ {
+ 	display:block;
+ 	margin-top:5px;
+ 	width:95%;
+ 	margin-left:2.5%;
+ }
+ input.samainput
+ {
+ 	display: block;
+    width: 100%;
+    outline: none;
+    padding: 14px 10px;
+    border-radius: 5px 5px;
+    border-color: #cccccc;
+ }
+
+ .listcontainer
+ {
+ 	display:block;
+ 	margin-top:5px;
+ 	width:95%;
+ 	margin-left:2.5%;
+ }
+
+
+@font-face {
+  font-family: "caps";
+  src: url("../assets/fonts/Capsuula.ttf");
+  /*font-weight: 100;*/
+}
+
+@font-face {
+  font-family: "front";
+  src: url("../assets/fonts/front.otf");
+  /*font-weight: 100;*/
+}
+

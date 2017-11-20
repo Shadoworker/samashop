@@ -1,0 +1,88 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+ .content-md{
+   background-color: #f2f2f2;
+ }
+
+   .popmenuicon
+   {
+       width: 18px;height: auto;
+       margin-right: 5px;
+   }
+   .samabottomrefs
+   {   
+       display: block;
+       width: 100%;
+       text-align: center;
+       color: #cccccc;
+       font-family: 'caps';
+       font-size: 16px;
+       position: absolute;
+       bottom: 10px;
+
+
+   }
+   input.samafield{
+        display: block;
+        width: 84%;
+        padding: 18px 18px;
+        margin-left: 8%;
+        border: solid 1px #cccccc;
+        border-radius: 4px 4px;
+        font-size: 16px;
+        letter-spacing: 1px;
+   }
+
+   .normalbtn
+   {
+    padding: 0px;
+    box-shadow: 0px 0px;
+    background-color: transparent;
+   }
+ 
+   .normalbtn.activated
+   {
+     background-color: transparent;
+     box-shadow: 0px 0px;
+   }
+
+   span.samaplaceholder
+   {
+        position: absolute;
+        top: 35.8%;
+        letter-spacing: 1px;
+        left: 12%;
+        font-size: 16px;
+        color:#cccccc;
+   }
+ 
+    *::-webkit-scrollbar,::-webkit-scrollbar
+    { 
+        display: none;
+    }
+   
+    *::-webkit-scrollbar-track,::-webkit-scrollbar
+    { 
+        display: none;
+    } 
+    ::-webkit-scrollbar-thumb,
+    *::-webkit-scrollbar-thumb
+    { 
+        display: none;
+    }
+ 

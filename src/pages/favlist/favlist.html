@@ -1,0 +1,100 @@
+ <ion-header>
+    <samaheader></samaheader>
+ </ion-header>
+  
+<ion-content>
+
+      <ion-grid>
+       <!-- List header  -->
+        <ion-row> 
+            <ion-col col-2>
+              <img (click)="goprev()" class="back_icon" src="../assets/back_icon.png">
+            </ion-col>
+            <ion-col col-8 text-center>
+               <p style="margin-top: 15px;">
+                 <span><img style="width: 19px;height: auto;margin-right: 5px;-webkit-filter:grayscale(100%);" src="../assets/samafav2_icon.png" alt=""></span>
+                 <span class="text_header">MES FAVORIS</span>
+                </p>
+            </ion-col>
+            <ion-col col-2>
+              <img class="back_icon" src="../assets/switch_view_icon.png">
+            </ion-col>
+        </ion-row>
+       
+            <!-- In order to not be obliged to go back to select new categ -->
+        <ion-row>
+            
+            <ion-col col-12>
+               <hr width="100%" align="center" style="color: #cccccc">
+            </ion-col>
+            <ion-slides >
+
+<!--  <div class="samascroll" style="width: 100%; height:50px; overflow-y: scroll; "> -->
+
+                <ion-slide >
+                  <div class="samascroll" style="width: 100%; height:370px; overflow-y: scroll;">
+                    
+                  <ion-row>
+                       
+                       <!--  <div class="samascroll" style="width: 100%; height:50px; overflow-y: scroll; "> -->
+                         
+                        <ion-row style="width: 100%;">
+                          <!-- [navPush]="shophomerout" -->
+                          <ion-col *ngFor="let fav of shops" col-12 no-padding (click)="gotoshop(fav)" >
+                              
+                                <div style="width: 95%; margin:2.5%;border-radius: 3px; border:solid 1px transparent;">
+                                 
+                                  <ion-card no-padding >
+                                    <ion-row no-padding>
+                                      <ion-col col-12 no-padding>
+                                       <div style="width: 100%; height: 150px; overflow: hidden;">
+                                         <img style="width: 100%; height: auto;" src="../assets/shopwall1.jpg"/>
+                                       </div>
+                                      </ion-col>
+                                    </ion-row>
+                                    <ion-card-content>
+                                      <ion-row>
+                                        <ion-col col-8>
+                                         <ion-row>
+                                           <ion-col col-12>
+                                             <span class="front" style="font-size: 14px;">{{fav.name}}</span>
+                                           </ion-col>
+                                           <ion-col col-12>
+                                             <span class="caps">{{fav.city}}</span>
+                                           </ion-col>
+                                         </ion-row>
+                                        </ion-col> 
+                                        <ion-col col-4>
+                                         <span class="caps"> 
+
+                                              <img (click)="defav($event,fav)" style="float: right;margin-right: 6px;width: 32px; height: 32px;margin-top: 15px;" src="../assets/defav_icon.png">
+                                            
+                                         </span>
+                                        </ion-col> 
+
+                                      </ion-row>
+                                    </ion-card-content>
+                                  </ion-card>
+
+                                </div>
+
+                          </ion-col>
+ 
+                       </ion-row>
+                         
+                      <!-- </div> -->
+
+                  </ion-row>
+
+                  </div>
+
+                </ion-slide>
+     
+           </ion-slides> 
+
+        </ion-row>
+ 
+   
+     </ion-grid>
+    
+</ion-content>

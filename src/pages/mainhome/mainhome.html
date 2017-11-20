@@ -1,0 +1,61 @@
+
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner_item Aligner-item--top"></div>
+    <img src="../assets/splash_samashop1.gif" alt="">
+    <div class="Aligner_item Aligner-item--bottom"></div>
+  </div>
+
+</div>
+
+<ion-content ng-controller="MainCtrl" class=" " style="background-image:url('../assets/mainback.png');background-size:cover">
+   
+   <div class="bloc_maincontainer" >
+
+     <ion-row>
+       <ion-col col-12 text-center>
+         <p style="margin-top:20%;">
+          <img class="samashophome_logo" src="../assets/samashophome_logo.png" alt="" >
+         </p>
+       </ion-col>
+     </ion-row>
+
+     <div style="position: absolute; display:block;width:100%;bottom:10%;">
+     <ion-row>
+        <ion-col col-12 text-center>
+            <p style="margin:0px;">
+             <img [navPush] = "loginrout" class="samabtns" src="../assets/connexion_btn.png" alt="" >
+            </p>
+          </ion-col>
+
+          <ion-col col-12 text-center>
+ 
+              <p style="margin:0px;">
+               <img  [navPush] = "signuprout"  class="samabtns" src="../assets/inscrip_btn.png" alt="" >
+              </p>
+          </ion-col>
+
+         <!--  <ion-col col-12 text-center>
+ 
+             <input type="file" (change)="vidit($event)" name="">
+             
+          </ion-col> -->
+ 
+ 
+              <p style="margin:0px;width: 100%;color: #fff; text-align: center;">
+                 <span class="caps">conditions</span> - <span class="caps">à propos</span>
+              </p>
+          
+
+
+    </ion-row>
+  </div>
+   </div>
+   
+   
+
+</ion-content>
+
+<script>
+  console.log("voiture");
+  </script>
